@@ -7,11 +7,11 @@ spring.datasource.password=1234
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 # JPA Configuration
-spring.jpa.hibernate.ddl-auto=none
+spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 spring.jpa.properties.hibernate.format_sql=true
 
-# SQL Initialization
+# Initialize the database using schema.sql
 spring.sql.init.mode=always
-spring.jpa.defer-datasource-initialization=true
+spring.sql.init.schema-locations=classpath:schema.sql
